@@ -1,0 +1,24 @@
+
+.progress-bar {
+	> p {
+		display: inline-block;
+		background-color: $color-progress-green;
+		width: calc(100% - 1.25em);
+	}
+	
+	height: 1em;
+	text-align: center;
+	
+	&:before, &:after {
+		background-color: transparent;
+	}
+	
+	&:before {
+		content: "[";
+		float: left;
+	}
+	&:after {
+		content: "]";
+		float: right;
+	}
+}

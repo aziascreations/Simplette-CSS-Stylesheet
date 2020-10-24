@@ -1,0 +1,20 @@
+
+button {
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+	height: 1em;
+	cursor: pointer;
+	font-weight: bold;
+	user-select: none;
+	
+	&:before {
+		content: "❰";
+		margin-right: $border-margin-bracket;
+	}
+	&:after {
+		content: "❱";
+		margin-left: $border-margin-bracket;
+	}
+}

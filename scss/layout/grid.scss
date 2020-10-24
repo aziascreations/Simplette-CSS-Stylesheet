@@ -1,0 +1,56 @@
+@mixin from-cell($position) {
+	.grid {
+		> *.from-#{$position} {
+			grid-column-start: $position;
+		}
+	}
+}
+
+@mixin to-cell($position) {
+	.grid {
+		> *.to-#{$position} {
+			grid-column-end: $position + 1;
+		}
+	}
+}
+
+@mixin cell-row($count) {
+	.grid {
+		> *.row-#{$count} {
+			grid-row: $count;
+		}
+	}
+}
+
+.grid {
+	display: grid;
+	
+	> *.cell {
+		//background-color: #444;
+	}
+	
+	&:not(.spaced) {
+		grid-gap: 0;
+		&.col-4 {
+			grid-template-columns: 25% 25% 25% 25%;
+		}
+		&.col-8 {
+			grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+		}
+	}
+	&.spaced {
+		grid-gap: 1em;
+		&.col-4 {
+			grid-template-columns: calc(25% - (3em / 4)) calc(25% - (3em / 4)) calc(25% - (3em / 4)) calc(25% - (3em / 4));
+		}
+		&.col-8 {
+			grid-template-columns: calc(12.5% - (7em / 8)) calc(12.5% - (7em / 8)) calc(12.5% - (7em / 8)) calc(12.5% - (7em / 8)) calc(12.5% - (7em / 8)) calc(12.5% - (7em / 8)) calc(12.5% - (7em / 8)) calc(12.5% - (7em / 8));
+		}
+	}
+}
+
+@for $i from 1 to 12 {
+	@include from-cell($i);
+	@include to-cell($i);
+	@include cell-row($i);
+}

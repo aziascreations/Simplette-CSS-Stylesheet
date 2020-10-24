@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Simplette Stylesheet Demo</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/css/simplette.min.css">
+	</head>
+	<body>
+		<header><h1><b>Simplette Stylesheet Demo</b></h1></header>
+		
+		<hr>
+		
+		<div class="margin-container auto-paragraph-margin">
+			<p>Simplette is a relatively basic CSS stylesheet whose main purpose is to provide a simple and yet functionnal set of styles that make it easier to generate webpages with a consistent appearance.</p>
+			
+			<p>One of the main "advantages" is the fact that there is no hidden margins paddings or spacings, you have to manually toggle/enable them when and where you want them.<br>
+			This might seem a bit cumbersome, but it makes it easier to generate a web page with a consistent appearance without having to fight the stylesheet itself.<br>
+			And whatever spacing you chose to enable will always be the same value: 1em (Expect for the 2 classes)</p>
+			
+			<p>It is also released into the public domain so that you can use
+			it without having to bother about licensing.</p>
+		</div>
+		
+		<hr>
+		
+		<div class="margin-container">
+			<p><span class="h2">Headings</span> - Element ⇨ Block elements | Tags ⇨ Inline blocks </p>
+			<hr class="subtle">
+			
+			<div class="indent-container">
+				<p>
+					<span class="h1">H1 heading class</span>
+					<span class="h2">H2 heading class</span>
+					<span class="h3">H3 heading class</span>
+					<span class="h4">H4 heading class</span>
+					<span class="h5">H5 heading class</span>
+					<span class="h6">H6 heading class</span>
+				</p>
+				<br>
+				<h1>H1 heading tag</h1>
+				<h2>H2 heading tag</h2>
+				<h3>H3 heading tag</h3>
+				<h4>H4 heading tag</h4>
+				<h5>H5 heading tag</h5>
+				<h6>H6 heading tag</h6>
+			</div>
+		</div>
+		
+		<hr>
+		
+		<div class="margin-container">
+			<p><span class="h2">Text & Paragraphs</span> - A margin is added between every paragraph, see the first paragraph</p>
+			<hr class="subtle">
+			
+			<div class="indent-container auto-paragraph-margin">
+				<p>Single line paragraph: You can use ".auto-paragraph-margin"
+				on the container to automate the paragraph spacing.</p>
+				<p>Multi line paragraph:<br>Second line</p>
+				Unparagraphed text, it has no automatic line-return. (2 &lt;br&gt; required)<br><br>
+				<a href="#">Unparagraphed link (2 &lt;br&gt; required)</a><br><br>
+				<p><a href="#">Paragraphed link</a></p>
+				<p>Inline <a href="#">link</a> example</p>
+				<p>
+					<u>Elements:</u>
+						Normal
+						<b>Bold</b>
+						<i>Italic</i>
+						<u>Underline</u>
+						<s>Striketrough</s>
+					<br>
+					<u>Classes:</u>
+						Normal
+						<span class="bold">Bold</span>
+						<span class="italic">Italic</span>
+						<span class="underline">Underline</span>
+						<span class="striketrough">Striketrough</span>
+						<span class="oblique">Oblique</span>
+						<span class="overline">Overline</span>
+				</p>
+				<p>Justified text can be done with the ".justified" class.<br>
+				No example is shown here to make this paragraph easier to read.</p>
+			</div>
+		</div>
+		
+		<hr>
+		
+		<div class="margin-container">
+			<p><span class="h2">Other elements</span></p>
+			<hr class="subtle">
+			
+			<div class="margin-container auto-paragraph-margin">
+				<details>
+					<summary>A simple &lt;details&gt; tag</summary>
+					<p>My content</p>
+				</details>
+			</div>
+			
+			<div class="margin-container auto-paragraph-margin">
+				<details>
+					<summary class="space-vert-small">A simple &lt;details&gt; tag with an internally integrated margin in the summary</summary>
+					<p>It avoids having to use yet another container.</p>
+				</details>
+			</div>
+			
+			<!--<div class="margin-container">
+				<div class="progress-bar">
+					<p>69%</p>
+				</div>
+			</div>-->
+		</div>
+		
+		<hr>
+		
+		<div class="margin-container">
+			<p><span class="h2">Form elements</span></p>
+			<hr class="subtle">
+			<div class="margin-container auto-paragraph-margin">
+				<button onclick="alert('Button clicked');">Button</button>
+			</div>
+		</div>
+		
+		<hr>
+		
+		<div class="margin-container">
+			<p><span class="h2">Grid</span></p>
+			<hr class="subtle">
+			<div class="margin-container auto-paragraph-margin">
+				<p class="underline">Default: non-spaced cell that contain justified text.</p>
+				<div class="grid col-4 justify">
+					<div class="cell from-1 to-1">
+						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
+					</div>
+					<div class="cell from-2 to-2">
+						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
+					</div>
+					<div class="cell from-3 to-3">
+						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
+					</div>
+					<div class="cell from-4 to-4">
+						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
+					</div>
+				</div>
+			</div>
+			
+			<hr>
+			
+			<div class="margin-container auto-paragraph-margin">
+				<p class="underline">Spaced: Uses the ".spaced" class on the grid that has cells that contain justified text.</p>
+				<div class="grid spaced col-4 justify">
+					<div class="cell from-1 to-1">
+						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
+					</div>
+					<div class="cell from-2 to-2">
+						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
+					</div>
+					<div class="cell from-3 to-3">
+						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
+					</div>
+					<div class="cell from-4 to-4">
+						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<hr>
+		
+		<footer>
+			<ul class="link-list">
+				<li><a href="#">Github Repository</a></li>
+				<li><a href="#">link #2</a></li>
+				<li><a href="#">link #3</a></li>
+				<li><a href="#">link #4</a></li>
+				<li><a href="#">link #5</a></li>
+			</ul>
+			<br>
+			<p>Made by <a href="https://github.com/aziascreations">BOZET Herwin</a></p>
+		</footer>
+		
+		<!-- Windows -->
+		<div>
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,95 @@
+
+//h1, h2, h3, h4, h5, h6, p, span, ul, li, ol, a
+html * {
+	color: $color-text-generic;
+	text-shadow: 1px 1px 1px $color-text-generic-shadow;
+	cursor: default;
+}
+
+header, footer {
+	text-align: center;
+}
+
+h1, .h1 {
+	font-size: 2em;
+}
+h2, .h2 {
+	font-size: 1.8em;
+}
+h3, .h3 {
+	font-size: 1.6em;
+}
+h4, .h4 {
+	font-size: 1.4em;
+}
+h5, .h5 {
+	font-size: 1.2em;
+}
+h6, .h6 {
+	font-size: 1em;
+}
+
+b, .bold {
+	font-weight: bold;
+}
+i, .italic {
+	font-style: italic;
+}
+.underline {
+	text-decoration: underline;
+}
+.striketrough {
+	text-decoration: line-through;
+}
+.overline {
+	text-decoration: overline;
+}
+.oblique {
+	font-style: oblique;
+}
+.justify {
+	text-align: justify;
+}
+
+* > .auto-paragraph-margin {
+	p:not(:last-child) {
+		margin-bottom: 1em;
+	}
+}
+
+a {
+	color: $color-link-common;
+	cursor: pointer;
+}
+
+ul, ol {
+	&.link-list {
+		font-size: 0;
+		
+		li {
+			margin: 0;
+			display: inline-block;
+			font-size: initial;
+			
+			&:first-of-type {
+				&:before {
+					content: "[";
+					margin-right: $link-margin-bracket;
+				}
+			}
+			
+			&:not(:last-of-type) {
+				&:after {
+					content: "｜";
+				}
+			}
+			
+			&:last-of-type {
+				&:after {
+					content: "]";
+					margin-left: $link-margin-bracket;
+				}
+			}
+		}
+	}
+}
