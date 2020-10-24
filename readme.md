@@ -8,7 +8,7 @@ And whatever spacing you chose to enable will always be the same value: 1em (Exp
 
 ## Elements & Classes
 
-Will come later, check the demo page for the moment.
+Will come later, check the [demo page](https://aziascreations.github.io/Simplette-CSS-Stylesheet/) for the moment.
 
 ## License
 
