@@ -17,4 +17,28 @@ button {
 		content: "❱";
 		margin-left: $border-margin-bracket;
 	}
+	&:disabled {
+		text-decoration: line-through;
+		cursor: default;
+	}
+}
+
+label {
+	&:before {
+		content: "$";
+		margin-right: $border-margin-label;
+	}
+}
+
+input {
+	&[type="text"], &[type="password"], &[type="number"], &[type="file"] {
+		height: 1em;
+		// Quick fix
+		padding: 1.5px 2px;
+	}
+	background-color: $color-background-darken-1;
+	border: none;
+    -webkit-box-shadow:inset 0px 0px 0px 1px $color-background-darken-2;
+    -moz-box-shadow:inset 0px 0px 0px 1px $color-background-darken-2;
+    box-shadow:inset 0px 0px 0px 1px $color-background-darken-2;
 }

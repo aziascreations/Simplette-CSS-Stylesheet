@@ -113,10 +113,42 @@
 		<hr>
 		
 		<div class="margin-container">
-			<p><span class="h2">Form elements</span></p>
+			<p><span class="h2">Form elements</span> - All of them are in a grid BTW</p>
 			<hr class="subtle">
+			
+			
 			<div class="margin-container auto-paragraph-margin">
-				<button onclick="alert('Button clicked');">Button</button>
+				<p class="underline">Buttons:</p>
+				<div class="grid spaced col-4">
+					<div class="cell from-1 to-2">
+						<button onclick="alert('Button clicked');">Button</button>
+					</div>
+					<div class="cell from-3 to-4">
+						<button onclick="alert('Button clicked');" disabled>Disabled</button>
+					</div>
+				</div>
+			</div>
+			
+			<hr>
+			
+			<div class="margin-container auto-paragraph-margin">
+				<p class="underline">Inputs:</p>
+				<div class="grid spaced col-4">
+					<div class="cell from-1 to-2">
+						<label for="f1">Text:</label><br>
+    					<input type="text" id="f1" name="f1" value="Placeholder">
+    					<br><br>
+						<label for="f2">Password with ".full-width":</label><br>
+    					<input type="password" class="full-width" id="f2" name="f2" value="Placeholder">
+					</div>
+					<div class="cell from-3 to-4">
+						<label for="f3">Number:</label><br>
+						<input type="number" id="f3" name="f3">
+						<br><br>
+						<!--<label for="f4">File:</label><br>
+						<input type="file" id="f4" name="f4">-->
+					</div>
+				</div>
 			</div>
 		</div>
 		
@@ -146,7 +178,7 @@
 			<hr>
 			
 			<div class="margin-container auto-paragraph-margin">
-				<p class="underline">Spaced: Uses the ".spaced" class on the grid that has cells that contain justified text.</p>
+				<p class="underline">Spaced: Uses the ".spaced" class on the &lt;div&gt; grid that has cells which contain justified text.</p>
 				<div class="grid spaced col-4 justify">
 					<div class="cell from-1 to-1">
 						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
@@ -168,7 +200,7 @@
 		
 		<footer>
 			<ul class="link-list">
-				<li><a href="#">Github Repository</a></li>
+				<li><a href="https://github.com/aziascreations/Simplette-CSS-Stylesheet">Github Repository</a></li>
 				<li><a href="#">link #2</a></li>
 				<li><a href="#">link #3</a></li>
 				<li><a href="#">link #4</a></li>
