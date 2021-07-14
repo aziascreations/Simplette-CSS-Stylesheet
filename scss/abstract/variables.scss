@@ -1,6 +1,4 @@
-
-//https://www.colorhexa.com/607d8b
-//$color-background-main: #607D8B;
+// ### Colors ###
 
 // https://www.color-hex.com/color/566f7c
 $color-background-lighten-2: #99a8b0;
@@ -13,12 +11,15 @@ $color-separator: #8eacbb;
 
 $color-text-generic: #eeeeee;
 $color-text-generic-invert: #111111;
-//$color-text-generic: #ececec;
 $color-text-generic-shadow: #1c313a;
+//$color-text-generic-old: #ececec;
 
 $color-link-common: #bbdefb;
 
 $color-progress-green: #5c7c55;
+
+
+// ### Spacing & Margins ###
 
 $link-margin-bracket: 5px;
 
@@ -26,6 +27,13 @@ $border-margin-bracket: 5px;
 $border-margin-label: 5px;
 //$border-margin-inputline: 5px;
 
-$border-image-up-b64: "iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGBAMAAAAS4vJ7AAAAD1BMVEUzQkqZqLBEWGN3i5ZWb3yl0XayAAAAGklEQVQI12MQFBRgEDZWYBB2gWAhJQUGIAAAGHwB28+3mzIAAAAASUVORK5CYII=";
 
-$border-image-down-b64: "iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGBAMAAAAS4vJ7AAAAD1BMVEUzQkqZqLBEWGN3i5ZWb3yl0XayAAAAGUlEQVQI12MAASYlRQYmF0MINjZkYBQUBAASCAG9ILHkHAAAAABJRU5ErkJggg==";
+// ### Images ###
+
+$border-image-normal-default-b64: "iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGBAMAAAAS4vJ7AAAAD1BMVEUzQkqZqLBEWGN3i5ZWb3yl0XayAAAAGklEQVQI12MQFBRgEDZWYBB2gWAhJQUGIAAAGHwB28+3mzIAAAAASUVORK5CYII=";
+
+$border-image-normal-inverted-b64: "iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGBAMAAAAS4vJ7AAAAD1BMVEUzQkqZqLBEWGN3i5ZWb3yl0XayAAAAGUlEQVQI12MAASYlRQYmF0MINjZkYBQUBAASCAG9ILHkHAAAAABJRU5ErkJggg==";
+
+$border-image-thick-default-b64: "iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMBAMAAACkW0HUAAAAG1BMVEUzQkqZqLA8TVaImqNWb3xEWGN3i5ZNY29mfYk9f23rAAAAM0lEQVQI12MQBAEBBmFjIFBgEE5LS0sFUhkdHaUgysUFJ5VeXg6iQoFAgUFICQgUGCAAALvsD+2aGpV6AAAAAElFTkSuQmCC";
+
+$border-image-thick-inverted-b64: "iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMBAMAAACkW0HUAAAAG1BMVEUzQkqZqLA8TVaImqNWb3xEWGN3i5ZNY29mfYk9f23rAAAAMklEQVQI12OAAiYlIFBkYAoFAkMGpvDy8jIQ5eLShpPq6ABRYWlpaUDKGAgMGRgFQQAAbWoPsYoOn3UAAAAASUVORK5CYII=";
