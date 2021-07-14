@@ -4,6 +4,10 @@
 // Around 570 bytes can be saved by doing this.
 $border-image-save-space: false;
 
-// TODO: Add a toggle for grids to export them in another file or select the desired sizes.
+// Set to true to remove the .show-borders class used for the demo and debugging
+$border-disable-show: false;
 
-// ?
+// Set to true to include the grid system in the main css file (simplette.grid.min.css is not affected and will always be generated !)
+$grid-include-in-main: false;
+
+// TODO: Add a toggle to select the desired sizes of grids.

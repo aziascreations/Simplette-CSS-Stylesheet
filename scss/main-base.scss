@@ -1,13 +1,17 @@
+/* Importing reset.css */
 @import 'base/reset';
 
-/* Start of custom CSS */
+/* Definition or variables and toggles */
 @import 'abstract/options';
 @import 'abstract/variables';
 
+/* Actual style definition */
 @import 'layout/base';
 @import 'layout/text';
 @import 'layout/details';
 //@import 'layout/progress';
 @import 'layout/forms';
+
+/* Special case for the optionnal grid system */
+$compile-grid: $grid-include-in-main;
 @import 'layout/grid';
-@import 'layout/other';

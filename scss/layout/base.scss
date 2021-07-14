@@ -56,20 +56,16 @@ main {
 	}
 }
 
-
-/*.show-borders {
-	& p {
+@if $border-disable-show == false {
+	div.show-borders, show-borders div {
+		border: 1px solid red;
+	}
+	
+	p.show-borders, .show-borders p {
 		border: 1px solid pink;
 	}
-}/**/
-
-div.show-borders, show-borders div {
-	border: 1px solid red;
 }
 
-p.show-borders, .show-borders p {
-	border: 1px solid pink;
-}
 
 // Old unfinished shaded container
 /*.border-container {
