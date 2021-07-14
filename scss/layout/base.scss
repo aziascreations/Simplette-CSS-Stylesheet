@@ -17,7 +17,12 @@ header, main, footer, .margin-container {
 }
 
 .indent-container {
-	margin-left: 15px
+	margin-left: 15px;
+}
+
+.spacing-container {
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .subtle {
@@ -40,4 +45,56 @@ main {
 
 .full-width {
 	width: 100%;
+}
+
+@media (orientation: portrait) {
+	.indent-container, .margin-container {
+		&.no-mobile-indent {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+
+/*.show-borders {
+	& p {
+		border: 1px solid pink;
+	}
+}/**/
+
+div.show-borders, show-borders div {
+	border: 1px solid red;
+}
+
+p.show-borders, .show-borders p {
+	border: 1px solid pink;
+}
+
+// Old unfinished shaded container
+/*.border-container {
+	padding: calc(1em / 2);
+	
+	&.up {
+		box-shadow: inset 0px calc(1em / 2 / 2) #DFDFDF80, inset calc(1em / 2 / 2) 0px #DFDFDF80,
+			inset 0px calc(1em / 2 ) #FFFFFF80, inset calc(1em / 2 ) 0px #FFFFFF80;
+	}
+	&.down {
+		//-webkit-box-shadow: inset 0px 0px 0px calc(1em / 2) #f00;
+    	//-moz-box-shadow: inset 0px 0px 0px calc(1em / 2) #f00;
+    	box-shadow: inset 0px 0px 0px calc(1em / 2) #f00;
+	}
+}*/
+
+.nice-border {
+    border: 2px solid transparent;
+    border-image: url(data:image/gif;base64,#{$border-image-up-b64}) 2 stretch;
+    
+    &.inverted {
+        border-image: url(data:image/gif;base64,#{$border-image-down-b64}) 2 stretch;
+    }
+    
+    &.thick {
+        border-width: 4px;
+    }
 }

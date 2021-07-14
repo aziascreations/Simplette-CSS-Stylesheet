@@ -5,14 +5,19 @@
 		<title>Simplette Stylesheet Demo</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./css/simplette.min.css">
+		<!--<link rel="stylesheet" href="./css/simplette.code.min.css"><!---->
 	</head>
 	<body>
 		<header><h1><b>Simplette Stylesheet Demo</b></h1></header>
 		
 		<hr>
 		
+        <a id="section-intro"></a>
 		<div class="margin-container auto-paragraph-margin">
-			<p>Simplette is a relatively basic CSS stylesheet whose main purpose is to provide a simple and yet functionnal set of styles that make it easier to generate webpages with a consistent appearance.</p>
+			<p>
+			    Simplette is a relatively basic CSS stylesheet whose main purpose is to provide a simple and yet functionnal set of styles that make it easier to generate webpages with a consistent appearance.<br>
+			    It started as a simple temporary stylesheet in the <a href="https://github.com/aziascreations/Simple-Chan">Simple-Chan</a> project and was re-used and improved in multiple projects before getting its own dedicated repository that you are visiting today.
+			</p>
 			
 			<p>One of the main "advantages" is the fact that there is no hidden margins paddings or spacings, you have to manually toggle/enable them when and where you want them.<br>
 			This might seem a bit cumbersome, but it makes it easier to generate a web page with a consistent appearance without having to fight the stylesheet itself.<br>
@@ -20,73 +25,221 @@
 			
 			<p>It is also released into the public domain so that you can use
 			it without having to bother about licensing.</p>
+			
+			<p>Sections:</p>
+			<ul class="link-list">
+				<li><a href="#section-intro">Introduction</a></li>
+				<li><a href="#section-headings">Headings</a></li>
+				<li><a href="#section-paragraphs">Text &amp; Paragraphs</a></li>
+				<li><a href="#section-containers">Containers</a></li>
+				<li><a href="#section-grid">Grid</a></li>
+				<li><a href="#section-details">Details</a></li>
+				<li><a href="#section-form">Forms</a></li>
+			</ul>
 		</div>
 		
 		<hr>
 		
-		<div class="margin-container">
-			<p><span class="h2">Headings</span> - Element ⇨ Block elements | Tags ⇨ Inline blocks </p>
+		<a id="section-headings"></a>
+		<div class="margin-container auto-paragraph-margin">
+			<p><span class="h2">Headings</span></p>
 			<hr class="subtle">
 			
-			<div class="indent-container">
-				<p>
-					<span class="h1">H1 heading class</span>
-					<span class="h2">H2 heading class</span>
-					<span class="h3">H3 heading class</span>
-					<span class="h4">H4 heading class</span>
-					<span class="h5">H5 heading class</span>
-					<span class="h6">H6 heading class</span>
-				</p>
-				<br>
-				<h1>H1 heading tag</h1>
-				<h2>H2 heading tag</h2>
-				<h3>H3 heading tag</h3>
-				<h4>H4 heading tag</h4>
-				<h5>H5 heading tag</h5>
-				<h6>H6 heading tag</h6>
+            <p><span class="h4">Using Elements</span> - By using the <i>&lt;h1&gt;</i> to <i>&lt;h6&gt;</i> tags. (Automatic line-break)</p>
+            <div class="margin-container">
+                <h1>H1 heading tag</h1>
+                <h2>H2 heading tag</h2>
+                <h3>H3 heading tag</h3>
+                <h4>H4 heading tag</h4>
+                <h5>H5 heading tag</h5>
+                <h6>H6 heading tag</h6>
 			</div>
+			<hr class="subtle">
+			
+            <p><span class="h4">Using Classes</span> - By using the <i>.h1</i> to <i>.h6</i> classes in a <i>&lt;span&gt;</i> tag. (No automatic line-break)</p>
+            <div class="margin-container">
+				<span class="h1">H1 heading class</span>
+				<span class="h2">H2 heading class</span>
+				<span class="h3">H3 heading class</span>
+				<span class="h4">H4 heading class</span>
+				<span class="h5">H5 heading class</span>
+				<span class="h6">H6 heading class</span>
+            </div>
 		</div>
 		
 		<hr>
 		
+		<a id="section-paragraphs"></a>
 		<div class="margin-container">
-			<p><span class="h2">Text & Paragraphs</span> - A margin is added between every paragraph, see the first paragraph</p>
+			<p><span class="h2">Text &amp; Paragraphs</span> - A margin is added between every paragraph, see the first paragraph</p>
 			<hr class="subtle">
 			
 			<div class="indent-container auto-paragraph-margin">
 				<p>Single line paragraph: You can use ".auto-paragraph-margin"
 				on the container to automate the paragraph spacing.</p>
-				<p>Multi line paragraph:<br>Second line</p>
-				Unparagraphed text, it has no automatic line-return. (2 &lt;br&gt; required)<br><br>
-				<a href="#">Unparagraphed link (2 &lt;br&gt; required)</a><br><br>
-				<p><a href="#">Paragraphed link</a></p>
-				<p>Inline <a href="#">link</a> example</p>
 				<p>
-					<u>Elements:</u>
-						Normal
-						<b>Bold</b>
-						<i>Italic</i>
-						<u>Underline</u>
-						<s>Striketrough</s>
-					<br>
-					<u>Classes:</u>
-						Normal
-						<span class="bold">Bold</span>
-						<span class="italic">Italic</span>
-						<span class="underline">Underline</span>
-						<span class="striketrough">Striketrough</span>
-						<span class="oblique">Oblique</span>
-						<span class="overline">Overline</span>
+                    Multi line paragraph:<br>
+                    If you dont add the aforementionned class, you will have to manually add <i>&lt;br&gt;</i> tags in between paragraphs.<br>
+                    A line-break is added at the end automatically in both cases.
 				</p>
+				Unparagraphed text, it has no automatic line-return. (2 <i>&lt;br&gt;</i> tags required at the end to get the same spacing)<br><br>
+				
+				<hr class="subtle">
+				
+				<p><a href="#">Paragraphed link</a></p>
+                <a href="#">Unparagraphed link (2 <i>&lt;br&gt;</i> tags required)</a><br><br>
+				<p>Inline <a href="#">link</a> example</p>
+				
+				<hr class="subtle">
+				
+				<p>
+                    <u>Decorated text via elements:</u>
+                    <br>&emsp;
+				    Normal
+					<b>Bold</b>
+					<i>Italic</i>
+					<u>Underline</u>
+					<s>Striketrough</s>
+				</p>
+				<p>
+					<u>Decorated text via classes:</u>
+                    <br>&emsp;
+					Normal
+					<span class="bold">Bold</span>
+					<span class="italic">Italic</span>
+					<span class="underline">Underline</span>
+					<span class="striketrough">Striketrough</span>
+					<span class="oblique">Oblique</span>
+					<span class="overline">Overline</span>
+                    <br>&emsp;
+                    Classes have the same name as the text shown above.
+				</p>
+				
+				<hr class="subtle">
+				
 				<p>Justified text can be done with the ".justified" class.<br>
-				No example is shown here to make this paragraph easier to read.</p>
+				No example is shown here to make this paragraph easier to read.<br>
+				See the <a href="#section-grid">grid section</a> for an example of justified text.</p>
+				
+				<hr class="subtle">
+				
+				<p>By using the <i>&lt;sup&gt;</i> and <i>&lt;sub&gt;</i> tags, you can create some inline <sup>supertext</sup> and <sub>subtext</sub> in a paragraph.</p>
 			</div>
 		</div>
 		
 		<hr>
 		
+		<a id="section-containers"></a>
 		<div class="margin-container">
-			<p><span class="h2">Other elements</span></p>
+			<p><span class="h2">Containers</span> - Borders show for demo</p>
+			<hr class="subtle">
+			
+            <p><span class="h4">Regular Containers</span></p>
+			<div class="margin-container auto-paragraph-margin">
+				<p>
+					<b>Colors:</b><br>
+					* Red: Div<br>
+					* Pink: Paragraph
+				</p>
+				<p>Borders shown with the "<i>.show-borders</i>" class.</p>
+			</div>
+			<div class="show-borders">
+				<p>Simple div with no container class (Uses the full width)</p>
+			</div>
+			<div class="margin-container show-borders">
+				<p><i>.magin-container</i> ⇨ 15px on all sides - (Left and right can be disabled on portrait mobile when combined with the "<i>.no-mobile-indent</i>" class)</p>
+			</div>
+			<div class="indent-container show-borders">
+				<p><i>.indent-container</i> ⇨ 15px on left - (Can also be disabled, see above)</p>
+			</div>
+			<div class="spacing-container show-borders">
+				<p><i>.spacing-container</i> ⇨ 15px on top and bottom</p>
+			</div>
+			
+			<hr class="subtle">
+			
+			
+            <p><span class="h4">Containers Borders</span> - Contained inside a spaced grid for convinience.</p>
+			<div class="margin-container auto-paragraph-margin">
+				<div class="grid col-4 spaced">
+					<div class="cell from-1 to-2">
+						<div class="nice-border"><p><i>&lt;div&gt;</i> element with "<i>.nice-border</i>" class. <sub><sup>(Thickness: 2px)</sup></sub></p></div>
+					</div>
+					<div class="cell from-3 to-4">
+						<div class="nice-border inverted"><p><i>&lt;div&gt;</i> element with "<i>.nice-border</i>" and "<i>.inverted</i>" classes.</p></div>
+                    </div>
+                    
+					<div class="cell from-1 to-2">
+						<div class="nice-border thick"><p>Same element as above with the "<i>.thick</i>" class added. <sub><sup>(Thickness: 4px)</sup></sub></p></div>
+					</div>
+					<div class="cell from-3 to-4">
+						<div class="nice-border inverted thick"><p>Same element as above with the "<i>.thick</i>" class added.</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<hr>
+		
+		<a id="section-grid"></a>
+		<div class="margin-container">
+			<p><span class="h2">Grid</span></p>
+			
+			<hr class="subtle">
+			
+			<div class="margin-container auto-paragraph-margin">
+				<p>
+				    Every <i>&lt;div&gt;</i> element with the "<i>.grid</i>" class will be considered as a grid.<br>
+				    You can also chose its internal size by using the "<i>.col-4</i>" or "<i>.col-8</i>" classes for 4 and 8 columns respectively.
+				</p>
+                <p>
+				    Afterward, each cell has to be a <i>&lt;div&gt;</i> element with the "<i>.cell</i>" class.<br>
+				    You can specify their size by using the "<i>.from-N</i>" and "<i>.to-N</i>" classes where <i>N</i> is a number between 1 and the macximum amount of columns.
+				</p>
+			    
+			    <hr class="subtle">
+			    
+				<p class="underline">Default: non-spaced cell that contain justified text.</p>
+				<div class="grid col-4 justify">
+					<div class="cell from-1 to-1">
+						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
+					</div>
+					<div class="cell from-2 to-2">
+						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
+					</div>
+					<div class="cell from-3 to-3">
+						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
+					</div>
+					<div class="cell from-4 to-4">
+						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
+					</div>
+				</div>
+			    
+			    <hr class="subtle">
+			    
+				<p class="underline">Spaced: Uses the ".spaced" class on the &lt;div&gt; grid that has cells which contain justified text.</p>
+				<div class="grid spaced col-4 justify">
+					<div class="cell from-1 to-1">
+						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
+					</div>
+					<div class="cell from-2 to-2">
+						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
+					</div>
+					<div class="cell from-3 to-3">
+						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
+					</div>
+					<div class="cell from-4 to-4">
+						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
+					</div>
+				</div>
+			</div>
+		</div>
+        
+		<hr>
+		
+		<a id="section-details"></a>
+		<div class="margin-container">
+			<p><span class="h2">Details</span></p>
 			<hr class="subtle">
 			
 			<div class="margin-container auto-paragraph-margin">
@@ -99,7 +252,10 @@
 			<div class="margin-container auto-paragraph-margin">
 				<details>
 					<summary class="space-vert-small">A simple &lt;details&gt; tag with an internally integrated margin in the summary</summary>
-					<p>It avoids having to use yet another container.</p>
+					<p>
+                        It avoids having to use yet another container.<br>
+                        You simply have to add the "<i>.space-vert-small</i>" class to the summary.
+					</p>
 				</details>
 			</div>
 			
@@ -112,8 +268,9 @@
 		
 		<hr>
 		
+		<a id="section-form"></a>
 		<div class="margin-container">
-			<p><span class="h2">Form elements</span> - All of them are in a grid BTW</p>
+			<p><span class="h2">Forms (Unfinished)</span> - All of them are in a grid BTW</p>
 			<hr class="subtle">
 			
 			
@@ -154,57 +311,22 @@
 		
 		<hr>
 		
-		<div class="margin-container">
-			<p><span class="h2">Grid</span></p>
+		<!--<div class="margin-container">
+			<p><span class="h2">Code</span></p>
 			<hr class="subtle">
-			<div class="margin-container auto-paragraph-margin">
-				<p class="underline">Default: non-spaced cell that contain justified text.</p>
-				<div class="grid col-4 justify">
-					<div class="cell from-1 to-1">
-						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
-					</div>
-					<div class="cell from-2 to-2">
-						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
-					</div>
-					<div class="cell from-3 to-3">
-						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
-					</div>
-					<div class="cell from-4 to-4">
-						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
-					</div>
-				</div>
-			</div>
 			
-			<hr>
-			
-			<div class="margin-container auto-paragraph-margin">
-				<p class="underline">Spaced: Uses the ".spaced" class on the &lt;div&gt; grid that has cells which contain justified text.</p>
-				<div class="grid spaced col-4 justify">
-					<div class="cell from-1 to-1">
-						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
-					</div>
-					<div class="cell from-2 to-2">
-						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
-					</div>
-					<div class="cell from-3 to-3">
-						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
-					</div>
-					<div class="cell from-4 to-4">
-						Lorem ipsum dolor sit amet, consecta adipis elit. Sed eu tortor placerat justo feugiat finibus.
-					</div>
-				</div>
-			</div>
+			<pre class="code">
+<code>Hello
+World !</code>
+<span class="line-numbers" aria-hidden="true"></span>
+			</pre>
 		</div>
 		
-		<hr>
+		<hr><!---->
 		
 		<footer>
 			<ul class="link-list">
 				<li><a href="https://github.com/aziascreations/Simplette-CSS-Stylesheet">Github Repository</a></li>
-				<li><a href="#">link #2</a></li>
-				<li><a href="#">link #3</a></li>
-				<li><a href="#">link #4</a></li>
-				<li><a href="#">link #5</a></li>
 			</ul>
 			<br>
 			<p>Made by <a href="https://github.com/aziascreations">BOZET Herwin</a></p>

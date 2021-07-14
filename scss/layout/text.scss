@@ -3,6 +3,7 @@
 html * {
 	color: $color-text-generic;
 	text-shadow: 1px 1px 1px $color-text-generic-shadow;
+	//text-shadow: 1px 1px $color-text-generic-shadow;
 	cursor: default;
 }
 
@@ -92,4 +93,16 @@ ul, ol {
 			}
 		}
 	}
+}
+
+//code, pre.code {}
+
+sup {
+	vertical-align: top;
+    font-size: smaller;
+}
+
+sub {
+	vertical-align: bottom;
+    font-size: smaller;
 }

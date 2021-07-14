@@ -1,0 +1,16 @@
+
+pre.code {
+	border: 1px solid red;
+	font-family: Consolas;
+	counter-reset: line;
+	tab-size: 4;
+	
+	>.line-numbers {
+		position: absolute;
+		border: 1px solid green;
+		
+		>span {
+			text-align: right;
+		}
+	}
+}

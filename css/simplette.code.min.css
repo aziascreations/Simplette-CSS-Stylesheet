@@ -1,0 +1,5 @@
+pre.code { border: 1px solid red; font-family: Consolas; counter-reset: line; tab-size: 4; }
+pre.code > .line-numbers { position: absolute; border: 1px solid green; }
+pre.code > .line-numbers > span { text-align: right; }
+
+/*# sourceMappingURL=simplette.code.min.css.map */

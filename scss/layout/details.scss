@@ -1,6 +1,10 @@
-
+// No longer seems to work...
 summary::-webkit-details-marker, summary::marker {
 	display: none;
+}
+
+details > summary {
+    list-style: none;
 }
 
 summary:after {

@@ -1,11 +1,13 @@
 
 //https://www.colorhexa.com/607d8b
 //$color-background-main: #607D8B;
+
+// https://www.color-hex.com/color/566f7c
+$color-background-lighten-2: #99a8b0;
+$color-background-lighten-1: #778b96;
 $color-background-main: #566f7c;
-$color-background-darken-1: #4b626d;
-$color-background-darken-2: #41545e;
-//$color-background-darken-3: #37474f;
-//$color-background-darken-4: #2c3940;
+$color-background-darken-1: #445863;
+$color-background-darken-2: #33424a;
 
 $color-separator: #8eacbb;
 
@@ -23,3 +25,7 @@ $link-margin-bracket: 5px;
 $border-margin-bracket: 5px;
 $border-margin-label: 5px;
 //$border-margin-inputline: 5px;
+
+$border-image-up-b64: "iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGBAMAAAAS4vJ7AAAAD1BMVEUzQkqZqLBEWGN3i5ZWb3yl0XayAAAAGklEQVQI12MQFBRgEDZWYBB2gWAhJQUGIAAAGHwB28+3mzIAAAAASUVORK5CYII=";
+
+$border-image-down-b64: "iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGBAMAAAAS4vJ7AAAAD1BMVEUzQkqZqLBEWGN3i5ZWb3yl0XayAAAAGUlEQVQI12MAASYlRQYmF0MINjZkYBQUBAASCAG9ILHkHAAAAABJRU5ErkJggg==";

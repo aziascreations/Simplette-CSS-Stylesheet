@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,QAAS,GACR,MAAM,EAAE,aAAa,EACrB,WAAW,EAAE,QAAQ,EACrB,aAAa,EAAE,IAAI,EACnB,QAAQ,EAAE,CAAC;AAEX,wBAAe,GACd,QAAQ,EAAE,QAAQ,EAClB,MAAM,EAAE,eAAe;AAEvB,+BAAM,GACL,UAAU,EAAE,KAAK",
+"sources": ["../scss/code/generic.scss"],
+"names": [],
+"file": "simplette.code.min.css"
+}
