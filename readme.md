@@ -14,7 +14,8 @@ Contains the base of the stylesheet with the following features:<br>
 &nbsp;&nbsp;● Containers (Margins only)<br>
 &nbsp;&nbsp;● Lists<br>
 &nbsp;&nbsp;● Details<br>
-&nbsp;&nbsp;● Forms
+&nbsp;&nbsp;● Forms<br>
+&nbsp;&nbsp;● Helpers
 
 And through the [config file](scss/abstract/options.scss), you can include the content of the other stylesheets.
 

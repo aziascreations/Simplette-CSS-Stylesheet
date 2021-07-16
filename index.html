@@ -43,6 +43,7 @@
 				<li><a href="#section-lists">Lists</a></li>
 				<li><a href="#section-details">Details</a></li>
 				<li><a href="#section-form">Forms</a></li>
+				<li><a href="#section-helpers">Helpers</a></li>
 			</ul>
 			<sub><sup>Requires "<i>simplette.base.min.css</i>" to be linked.</sup></sub>
 			<br><br>
@@ -236,12 +237,6 @@
 					</p>
 				</details>
 			</div>
-
-			<!--<div class="margin-container">
-<div class="progress-bar">
-<p>69%</p>
-</div>
-</div>-->
 		</div>
 
 		<hr>
@@ -280,8 +275,46 @@
 						<label for="f3">Number:</label><br>
 						<input type="number" id="f3" name="f3">
 						<br><br>
-						<!--<label for="f4">File:</label><br>
-<input type="file" id="f4" name="f4">-->
+						<!--<label for="f4">File:</label><br><input type="file" id="f4" name="f4">-->
+						<!--<div class="margin-container"><div class="progress-bar"><p>69%</p></div></div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<hr>
+		
+		<a id="section-helpers"></a>
+		<div class="margin-container">
+			<p><span class="h2">Base :: Helpers</span></p>
+			<hr class="subtle">
+			<div class="margin-container auto-paragraph-margin">
+				<p>The classes are applied to a container "<i>&lt;div&gt;</i>" element contained in a grid cell to help with visualisation.</p>
+				<div class="grid col-4 spaced">
+					<div class="cell from-1 to-2">
+						<div class="nice-border inverted tl">
+							<p>Text with "<i>.tl</i>" or "<i>.text-left</i>".</p>
+						</div>
+					</div>
+					<div class="cell from-3 to-4">
+						<div class="nice-border inverted tr">
+							<p>Text with "<i>.tr</i>" or "<i>.text-right</i>".</p>
+						</div>
+					</div>
+					<div class="cell from-1 to-2">
+						<div class="nice-border inverted fl">
+							<p>Text with "<i>.fl</i>" or "<i>.float-left</i>", "<i>&lt;div&gt;</i>" becomes dynamically sized.</p>
+						</div>
+					</div>
+					<div class="cell from-3 to-4">
+						<div class="nice-border inverted fr">
+							<p>Text with "<i>.fr</i>" or "<i>.float-right</i>", "<i>&lt;div&gt;</i>" becomes dynamically sized.</p>
+						</div>
+					</div>
+					<div class="cell from-1 to-4">
+						<div class="nice-border inverted fl full-width">
+							<p>Text with "<i>.fl</i>" or "<i>.float-left</i>", and "<i>.full-width</i>", "<i>&lt;div&gt;</i>" stays at full width. <sub><sup>Has sizing issues however</sup></sub></p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -474,10 +507,5 @@
 			<p>Made by <a href="https://github.com/aziascreations">BOZET Herwin</a></p>
 		</footer>
 		<!-- ### Footer END ### -->
-
-		<!-- Windows -->
-		<div>
-			<!-- Not done yet. -->
-		</div>
 	</body>
 </html>
