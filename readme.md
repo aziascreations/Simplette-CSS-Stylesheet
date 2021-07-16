@@ -9,26 +9,26 @@ And whatever spacing you chose to enable will always be the same value: 1em (Exp
 ## Stylesheets
 
 ### css/simplette.base.min.css
-Contains the base of the stylesheet with the following features:
-* Text & headings
-* Containers (Margins only)
-* Lists
-* Details
-* Forms
+Contains the base of the stylesheet with the following features:<br>
+&nbsp;&nbsp;● Text & headings<br>
+&nbsp;&nbsp;● Containers (Margins only)<br>
+&nbsp;&nbsp;● Lists<br>
+&nbsp;&nbsp;● Details<br>
+&nbsp;&nbsp;● Forms
 
 And through the [config file](scss/abstract/options.scss), you can include the content of the other stylesheets.
 
 ### css/simplette.grid.min.css
-TODO
-
-### css/simplette.code.min.css
-TODO
+Contains the grid system.
 
 ### css/simplette.fancy.min.css
-Contains a couple of fancy styles to lighten up you page:
-* Containers borders
-* Gradients
-* Frames
+Contains a couple of fancy styles to lighten up you page:<br>
+&nbsp;&nbsp;● Containers borders<br>
+&nbsp;&nbsp;● Gradients<br>
+&nbsp;&nbsp;● Frames
+
+### css/simplette.all.min.css
+Contains everything in a single file.
 
 ## Building
 

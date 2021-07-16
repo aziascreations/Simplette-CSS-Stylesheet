@@ -1,8 +1,8 @@
 @if $compile-fancy {
 	.gradient-background {
-		background: linear-gradient(90deg, #{$color-background-darken-1} 0%, #{$color-background-lighten-1} 100%);
+		background: linear-gradient(90deg, #{$color-background-darken-1}#{$color-gradient-opacity} 0%, #{$color-background-lighten-1}#{$color-gradient-opacity} 100%);
 		&.flipped {
-			background: linear-gradient(90deg, #{$color-background-lighten-1} 0%, #{$color-background-darken-1} 100%);
+			background: linear-gradient(90deg, #{$color-background-lighten-1}#{$color-gradient-opacity} 0%, #{$color-background-darken-1}#{$color-gradient-opacity} 100%);
 		}
 	}
 }

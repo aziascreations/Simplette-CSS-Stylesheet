@@ -13,9 +13,6 @@ $fancy-include-in-main: false;
 // Around 570 bytes can be saved by doing this.
 $border-image-save-space: false;
 
-// Set to true to remove the .show-borders class used for the demo and debugging
-$border-disable-show: false;
-
 // Set to true to smooth the scaled border image on elements with the .nice-border and .thick classes.
 $border-use-smooth-scaling: true;
 

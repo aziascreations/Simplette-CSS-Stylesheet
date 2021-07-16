@@ -55,28 +55,3 @@ main {
 		}
 	}
 }
-
-@if $border-disable-show == false {
-	div.show-borders, show-borders div {
-		border: 1px solid red;
-	}
-	
-	p.show-borders, .show-borders p {
-		border: 1px solid pink;
-	}
-}
-
-// Old unfinished shaded container
-/*.border-container {
-	padding: calc(1em / 2);
-	
-	&.up {
-		box-shadow: inset 0px calc(1em / 2 / 2) #DFDFDF80, inset calc(1em / 2 / 2) 0px #DFDFDF80,
-			inset 0px calc(1em / 2 ) #FFFFFF80, inset calc(1em / 2 ) 0px #FFFFFF80;
-	}
-	&.down {
-		//-webkit-box-shadow: inset 0px 0px 0px calc(1em / 2) #f00;
-    	//-moz-box-shadow: inset 0px 0px 0px calc(1em / 2) #f00;
-    	box-shadow: inset 0px 0px 0px calc(1em / 2) #f00;
-	}
-}*/

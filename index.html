@@ -7,6 +7,11 @@
 		<link rel="stylesheet" href="./css/simplette.base.min.css">
 		<link rel="stylesheet" href="./css/simplette.grid.min.css">
 		<link rel="stylesheet" href="./css/simplette.fancy.min.css">
+		<style>
+			.show-border {
+				border: 1px solid #33424a;
+			}
+		</style>
 	</head>
 	<body>
 		<!-- ### Header START ### -->
@@ -60,7 +65,7 @@
 		<hr><hr>
 		<!-- ### Header END ### -->
 		
-		
+		<!-- ### Base stylesheet START ### -->
 		<a id="section-headings"></a>
 		<div class="margin-container auto-paragraph-margin">
 			<p><span class="h2">Base :: Headings</span></p>
@@ -152,32 +157,36 @@
 
 		<a id="section-containers"></a>
 		<div class="margin-container">
-			<p><span class="h2">Base :: Containers</span> - Borders show for demo</p>
+			<p><span class="h2">Base :: Containers</span></p>
 			<hr class="subtle">
-
-			<p><span class="h4">Regular Containers</span></p>
 			<div class="margin-container auto-paragraph-margin">
 				<p>
-					<b>Colors:</b><br>
-					* Red: Div<br>
-					* Pink: Paragraph
+					Borders are shown for the demo with a special class defined in the demo page and the "<i>.frame</i>" class.<br>
+					The light border represents the parent container, and the dark one is the container that may have margins and uses the described classes.
 				</p>
-				<p>
-					Borders shown with the "<i>.show-borders</i>" class.<br>
-					These can be disabled and removed from the final CSS file by setting "<i>$border-disable-show</i>" to <i>false</i> in "<i>scss/abstract/options.scss</i>".<br>
-				</p>
-			</div>
-			<div class="show-borders">
-				<p>Simple div with no container class (Uses the full width)</p>
-			</div>
-			<div class="margin-container show-borders">
-				<p><i>.magin-container</i> ⇨ 15px on all sides - (Left and right can be disabled on portrait mobile when combined with the "<i>.no-mobile-indent</i>" class)</p>
-			</div>
-			<div class="indent-container show-borders">
-				<p><i>.indent-container</i> ⇨ 15px on left - (Can also be disabled, see above)</p>
-			</div>
-			<div class="spacing-container show-borders">
-				<p><i>.spacing-container</i> ⇨ 15px on top and bottom</p>
+				<div class="frame">
+					<div class="show-border">
+						<p>Simple div with no container class (Uses the full width and has no margin)</p>
+					</div>
+				</div>
+				<br>
+				<div class="frame">
+					<div class="margin-container show-border">
+						<p><i>.magin-container</i> ⇨ 15px of margin on all sides - (Left and right can be disabled on portrait mobile when combined with the "<i>.no-mobile-indent</i>" class)</p>
+					</div>
+				</div>
+				<br>
+				<div class="frame">
+					<div class="indent-container show-border">
+						<p><i>.indent-container</i> ⇨ 15px of margin on left - (Can also be disabled with the "<i>.no-mobile-indent</i>" class, see above)</p>
+					</div>
+				</div>
+				<br>
+				<div class="frame">
+					<div class="spacing-container show-border">
+						<p><i>.spacing-container</i> ⇨ 15px of margin on top and bottom</p>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -278,6 +287,7 @@
 			</div>
 		</div>
 		<hr><hr>
+		<!-- ### Base stylesheet END ### -->
 		
 		<!-- ### Grid stylesheet START ### -->
 		<a id="section-grid"></a>
@@ -412,7 +422,7 @@
 					</div>
 					<p>
 						This is a "<i>&lt;div&gt;</i>" element with the "<i>.frame</i>" class.<br>
-						The frame also has the "<i>spaced</i>" and "<i>padded</i>" classes to ensure no elements overlap.<br>
+						The frame also has the "<i>.spaced</i>" and "<i>.padded</i>" classes to ensure no elements overlap.<br>
 						The margin on top is 0.5em for the title, and the inner padding is 0.5em on all sides to keep a consistent look if no title is used when you have a top margin or previous paragraph margin.
 					</p>
 					<p>
@@ -438,10 +448,18 @@
 					<div class="title">
 						<p>Title</p>
 					</div>
-					<p>
-						Text here.
-					</p>
+					<p>Text here.</p>
+					<p>This frame simply does not use the "<i>.spaced</i>" and "<i>.padded</i>" classes.</p>
 				</div>
+			</div>
+			<div class="margin-container">
+				<fieldset class="frame padded">
+					<legend>Frame done with a "<i>&lt;fieldset&gt;</i>" element which has the "<i>.frame</i>" class.</legend>
+					<p>
+						The label can be done like the other ones or with the "<i>&lt;legend&gt;</i>" element.<br>
+						And you can put your content in here in the exact same way as the other type of frames.
+					</p>
+				</fieldset>
 			</div>
 		</div>
 		<hr><hr>
