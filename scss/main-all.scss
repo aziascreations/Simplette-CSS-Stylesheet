@@ -1,13 +1,13 @@
-@import 'base/reset';
+@import 'externals/reset';
 @import 'abstract/options';
 @import 'abstract/variables';
-@import 'layout/base';
-@import 'layout/text';
-@import 'layout/details';
-@import 'layout/forms';
+@import 'base/base';
+@import 'base/text';
+@import 'base/details';
+@import 'base/forms';
 
 $compile-grid: true;
-@import 'layout/grid';
+@import 'grid/grid';
 
 $compile-fancy: true;
 @import 'fancy/gradient';

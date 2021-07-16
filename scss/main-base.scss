@@ -1,20 +1,20 @@
 /* Importing reset.css */
-@import 'base/reset';
+@import 'externals/reset';
 
 /* Definition or variables and toggles */
 @import 'abstract/options';
 @import 'abstract/variables';
 
 /* Actual style definition */
-@import 'layout/base';
-@import 'layout/text';
-@import 'layout/details';
-@import 'layout/forms';
-//@import 'layout/progress';
+@import 'base/base';
+@import 'base/text';
+@import 'base/details';
+@import 'base/forms';
+//@import 'base/progress';
 
 /* Special case for the optionnal grid system */
 $compile-grid: $grid-include-in-main;
-@import 'layout/grid';
+@import 'grid/grid';
 
 /* Special case for the fancy styles */
 $compile-fancy: $fancy-include-in-main;

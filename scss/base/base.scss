@@ -10,6 +10,10 @@ body {
 
 hr {
 	border-color: $color-separator;
+	
+	&.thin {
+		margin: 0;
+	}
 }
 
 header, main, footer, .margin-container {
