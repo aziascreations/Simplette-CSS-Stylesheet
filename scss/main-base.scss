@@ -9,9 +9,15 @@
 @import 'layout/base';
 @import 'layout/text';
 @import 'layout/details';
-//@import 'layout/progress';
 @import 'layout/forms';
+//@import 'layout/progress';
 
 /* Special case for the optionnal grid system */
 $compile-grid: $grid-include-in-main;
 @import 'layout/grid';
+
+/* Special case for the fancy styles */
+$compile-fancy: $fancy-include-in-main;
+@import 'fancy/gradient';
+@import 'fancy/borders';
+@import 'fancy/frame';

@@ -66,7 +66,6 @@ main {
 	}
 }
 
-
 // Old unfinished shaded container
 /*.border-container {
 	padding: calc(1em / 2);
@@ -81,27 +80,3 @@ main {
     	box-shadow: inset 0px 0px 0px calc(1em / 2) #f00;
 	}
 }*/
-
-.nice-border {
-    border: 2px solid transparent;
-    border-image: url(data:image/gif;base64,#{$border-image-normal-default-b64}) 2 stretch;
-    image-rendering: pixelated;
-    
-    &.inverted {
-        border-image: url(data:image/gif;base64,#{$border-image-normal-inverted-b64}) 2 stretch;
-    }
-    
-    &.thick {
-        border-width: 4px;
-        
-        @if $border-image-save-space == false {
-            &:not(.low-res) {
-                border-image: url(data:image/gif;base64,#{$border-image-thick-default-b64}) 4 stretch;
-                
-                &.inverted {
-                    border-image: url(data:image/gif;base64,#{$border-image-thick-inverted-b64}) 4 stretch;
-                }
-            }
-        }
-    }
-}

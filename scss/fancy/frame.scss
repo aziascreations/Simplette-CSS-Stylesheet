@@ -1,0 +1,39 @@
+@if $compile-fancy {
+	.frame {
+		// Allows the use of position: absolute later on.
+		position: relative;
+		
+		border: 2px solid transparent;
+		border-image: url(data:image/gif;base64,#{$border-frame-light}) 2 stretch;
+		
+		&.spaced {
+			margin-top: 0.5em;
+		}
+		
+		&.padded {
+			padding: 0.5em;
+		}
+		
+		&.dark {
+			border-image: url(data:image/gif;base64,#{$border-frame-dark}) 2 stretch;
+		}
+		
+		>.title {
+			background-color: $color-background-main;
+			display: inline-block;
+			position: absolute;
+			top: -0.5em;
+			left: 0.75em;
+			padding: 0 0.125em 0 0.125em;
+			z-index: 1;
+		}
+		
+		&.fun {
+			>.title {
+				::before {
+					content: "> ";
+				}
+			}
+		}
+	}
+}

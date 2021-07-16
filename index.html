@@ -6,12 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./css/simplette.base.min.css">
 		<link rel="stylesheet" href="./css/simplette.grid.min.css">
-		<!--<link rel="stylesheet" href="./css/simplette.code.min.css"><!---->
+		<link rel="stylesheet" href="./css/simplette.fancy.min.css">
 	</head>
 	<body>
+		<!-- ### Header START ### -->
 		<header><h1><b>Simplette Stylesheet Demo</b></h1></header>
-
-		<hr>
+		<hr><hr>
 
 		<a id="section-intro"></a>
 		<div class="margin-container auto-paragraph-margin">
@@ -19,33 +19,51 @@
 				Simplette is a relatively basic CSS stylesheet whose main purpose is to provide a simple and yet functional set of styles that make it easier to generate web pages with a consistent appearance.<br>
 				It started as a simple temporary stylesheet in the <a href="https://github.com/aziascreations/Simple-Chan">Simple-Chan</a> project and was re-used and improved in multiple projects before getting its own dedicated repository that you are visiting today.
 			</p>
-
-			<p>One of the main "advantages" is the fact that there is no hidden margins paddings or spacings, you have to manually toggle/enable them when and where you want them.<br>
+			<p>
+				One of the main "advantages" is the fact that there is no hidden margins paddings or spacings, you have to manually toggle/enable them when and where you want them.<br>
 				This might seem a bit cumbersome, but it makes it easier to generate a web page with a consistent appearance without having to fight the stylesheet itself.<br>
-				And whatever spacing you chose to enable will always be the same value: 1em or 15px (Expect for the "<i>.nice-border</i>" and "<i>.space-vert-small</i>" classes)</p>
-
-			<p>It is also released into the public domain so that you can use
-				it without having to bother about licensing.</p>
-
+				And whatever spacing you chose to enable will always be the same value: 1em or 15px (Expect for the "<i>.nice-border</i>" and "<i>.space-vert-small</i>" classes)
+			</p>
+			<p>It is also released into the public domain so that you can use it without having to bother about licensing.</p>
+		</div>	
+		<hr class="subtle">
+		<div class="margin-container">
 			<!-- No paragraphed used for shorter spacing since .auto-paragraph-margin is applied to the container-->
-			Sections:
+			Base:
 			<ul class="link-list">
 				<li><a href="#section-intro">Introduction</a></li>
 				<li><a href="#section-headings">Headings</a></li>
 				<li><a href="#section-paragraphs">Text &amp; Paragraphs</a></li>
 				<li><a href="#section-containers">Containers</a></li>
-				<li><a href="#section-grid">Grid</a></li>
 				<li><a href="#section-lists">Lists</a></li>
 				<li><a href="#section-details">Details</a></li>
 				<li><a href="#section-form">Forms</a></li>
 			</ul>
+			<sub><sup>Requires "<i>simplette.base.min.css</i>" to be linked.</sup></sub>
+			<br><br>
+			
+			Grid:
+			<ul class="link-list">
+				<li><a href="#section-grid">Grid</a></li>
+			</ul>
+			<sub><sup>Requires "<i>simplette.grid.min.css</i>" to be linked or "<i>$grid-include-in-main</i>" set to <i>true</i>.</sup></sub>
+			<br><br>
+			
+			Fancy:
+			<ul class="link-list">
+				<li><a href="#section-grid">Gradient</a></li>
+				<li><a href="#section-borders">Borders</a></li>
+				<li><a href="#section-frame">Frame</a></li>
+			</ul>
+			<sub><sup>Requires "<i>simplette.fancy.min.css</i>" to be linked or "<i>$fancy-include-in-main</i>" set to <i>true</i>.</sup></sub>
 		</div>
-
-		<hr>
-
+		<hr><hr>
+		<!-- ### Header END ### -->
+		
+		
 		<a id="section-headings"></a>
 		<div class="margin-container auto-paragraph-margin">
-			<p><span class="h2">Headings</span></p>
+			<p><span class="h2">Base :: Headings</span></p>
 			<hr class="subtle">
 
 			<p><span class="h4">Using Elements</span> - By using the <i>&lt;h1&gt;</i> to <i>&lt;h6&gt;</i> elements. (Automatic line-break)</p>
@@ -74,7 +92,7 @@
 
 		<a id="section-paragraphs"></a>
 		<div class="margin-container">
-			<p><span class="h2">Text &amp; Paragraphs</span> - A margin is added between every paragraph, see the first paragraph</p>
+			<p><span class="h2">Base :: Text &amp; Paragraphs</span> - A margin is added between every paragraph, see the first paragraph</p>
 			<hr class="subtle">
 
 			<div class="indent-container auto-paragraph-margin">
@@ -85,7 +103,7 @@
 					If you don't add the aforementioned class, you will have to manually add <i>&lt;br&gt;</i> elements in between paragraphs.<br>
 					A line-break is added at the end automatically in both cases.
 				</p>
-				Unparagraphed text, it has no automatic line-return. (2 <i>&lt;br&gt;</i> elements required at the end to get the same spacing)<br><br>
+				Unparagraphed text, it has no automatic line-return. (2 <i>&lt;br&gt;</i> elements required at the end to get the same spacing between paragraphs)<br><br>
 
 				<hr class="subtle">
 
@@ -134,7 +152,7 @@
 
 		<a id="section-containers"></a>
 		<div class="margin-container">
-			<p><span class="h2">Containers</span> - Borders show for demo</p>
+			<p><span class="h2">Base :: Containers</span> - Borders show for demo</p>
 			<hr class="subtle">
 
 			<p><span class="h4">Regular Containers</span></p>
@@ -144,7 +162,10 @@
 					* Red: Div<br>
 					* Pink: Paragraph
 				</p>
-				<p>Borders shown with the "<i>.show-borders</i>" class.</p>
+				<p>
+					Borders shown with the "<i>.show-borders</i>" class.<br>
+					These can be disabled and removed from the final CSS file by setting "<i>$border-disable-show</i>" to <i>false</i> in "<i>scss/abstract/options.scss</i>".<br>
+				</p>
 			</div>
 			<div class="show-borders">
 				<p>Simple div with no container class (Uses the full width)</p>
@@ -158,49 +179,110 @@
 			<div class="spacing-container show-borders">
 				<p><i>.spacing-container</i> ⇨ 15px on top and bottom</p>
 			</div>
+		</div>
 
+		<hr>
+
+		<a id="section-lists"></a>
+		<div class="margin-container">
+			<p><span class="h2">Base :: Lists</span></p>
 			<hr class="subtle">
-
-
-			<p><span class="h4">Containers Borders</span> - Contained inside a spaced grid for convenience.</p>
 			<div class="margin-container auto-paragraph-margin">
-				<div class="grid col-4 spaced">
-					<div class="cell from-1 to-2">
-						<div class="nice-border"><p><i>&lt;div&gt;</i> element with "<i>.nice-border</i>" class. <sub><sup>(Thickness: 2px)</sup></sub></p></div>
-					</div>
-					<div class="cell from-3 to-4">
-						<div class="nice-border inverted"><p><i>&lt;div&gt;</i> element with "<i>.nice-border</i>" and "<i>.inverted</i>" classes.</p></div>
-					</div>
-
-					<div class="cell from-1 to-2">
-						<div class="nice-border thick"><p>Same element as above with the "<i>.thick</i>" class added. <sub><sup>(Thickness: 4px)</sup></sub></p></div>
-					</div>
-					<div class="cell from-3 to-4">
-						<div class="nice-border inverted thick"><p>Same element as above with the "<i>.thick</i>" class added.</p></div>
-					</div>
-
-					<div class="cell from-1 to-2">
-						<div class="nice-border thick low-res"><p>Same element as above with the "<i>.low-res</i>" class added.</p></div>
-					</div>
-					<div class="cell from-3 to-4">
-						<div class="nice-border inverted thick low-res"><p>Same element as above with the "<i>.low-res</i>" class added.</p></div>
-					</div>
-				</div>
-
-				<hr class="subtle">
-
+				<p><span class="h4">Link lists</span></p>
 				<p>
-					The thick border uses a higher resolution image and can be made to use that same one as the default one by setting "<i>$border-image-save-space</i>" to <i>true</i> in "<i>scss/abstract/options.scss</i>".<br>
-					This can help save around 570 bytes in the final compiled stylesheet and removes the "<i>.low-res</i>" class.
+					By creating a list with the "<i>.link-list</i>" class, every entry will be presented in the following inline format.<br>
+					Be aware that nested and inline lists are not supported by this class yet !
 				</p>
+				<ul class="link-list">
+					<li><a href="#">Link 1</a></li>
+					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+					<li>Just some text</li>
+					<li><a href="#">Link 4</a></li>
+				</ul>
+				<!-- TODO: Inlined lists -->
 			</div>
 		</div>
 
 		<hr>
 
+		<a id="section-details"></a>
+		<div class="margin-container">
+			<p><span class="h2">Base :: Details</span></p>
+			<hr class="subtle">
+
+			<div class="margin-container auto-paragraph-margin">
+				<details>
+					<summary>A simple &lt;details&gt; element</summary>
+					<p>My content</p>
+				</details>
+			</div>
+
+			<div class="margin-container auto-paragraph-margin">
+				<details>
+					<summary class="space-vert-small">A simple &lt;details&gt; element with a margin integrated in the summary</summary>
+					<p>
+						It avoids having to use yet another container.<br>
+						You simply have to add the "<i>.space-vert-small</i>" class to the summary.
+					</p>
+				</details>
+			</div>
+
+			<!--<div class="margin-container">
+<div class="progress-bar">
+<p>69%</p>
+</div>
+</div>-->
+		</div>
+
+		<hr>
+
+		<a id="section-form"></a>
+		<div class="margin-container">
+			<p><span class="h2">Base :: Forms (Unfinished)</span></p>
+			<hr class="subtle">
+
+
+			<div class="margin-container auto-paragraph-margin">
+				<p class="underline">Buttons:</p>
+				<div class="grid spaced col-4">
+					<div class="cell from-1 to-2">
+						<button onclick="alert('Button clicked');">Button</button>
+					</div>
+					<div class="cell from-3 to-4">
+						<button onclick="alert('Button clicked');" disabled>Disabled</button>
+					</div>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="margin-container auto-paragraph-margin">
+				<p class="underline">Inputs:</p>
+				<div class="grid spaced col-4">
+					<div class="cell from-1 to-2">
+						<label for="f1">Text:</label><br>
+						<input type="text" id="f1" name="f1" value="Placeholder">
+						<br><br>
+						<label for="f2">Password with ".full-width":</label><br>
+						<input type="password" class="full-width" id="f2" name="f2" value="Placeholder">
+					</div>
+					<div class="cell from-3 to-4">
+						<label for="f3">Number:</label><br>
+						<input type="number" id="f3" name="f3">
+						<br><br>
+						<!--<label for="f4">File:</label><br>
+<input type="file" id="f4" name="f4">-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr><hr>
+		
+		<!-- ### Grid stylesheet START ### -->
 		<a id="section-grid"></a>
 		<div class="margin-container">
-			<p><span class="h2">Grid</span> - Requires "<i>simplette.grid.min.css</i>" to be linked or "<i>$grid-include-in-main</i>" set to <i>true</i>.</p>
+			<p><span class="h2">Grid :: Grid</span></p>
 
 			<hr class="subtle">
 
@@ -255,120 +337,117 @@
 				</div>
 			</div>
 		</div>
-
-		<hr>
-
-		<a id="section-lists"></a>
+		<hr><hr>
+		<!-- ### Grid stylesheet END ### -->
+		
+		<!-- ### Fancy stylesheet START ### -->
+		<a id="section-gradient"></a>
 		<div class="margin-container">
-			<p><span class="h2">Lists</span></p>
+			<p><span class="h2">Fancy :: Gradient</span></p>
 			<hr class="subtle">
-
-			<p><span class="h4">Link lists</span></p>
+			<div class="grid col-4 justify margin-container">
+				<div class="cell from-1 to-2">
+					<i>&lt;div&gt;</i> element with the "<i>.gradient-background</i>" class.
+				</div>
+				<div class="cell from-3 to-4">
+					<i>&lt;div&gt;</i> element with the "<i>.gradient-background</i>" and "<i>.flipped</i>" class.
+				</div>
+			</div>
+			<div class="grid col-4 justify margin-container spaced">
+				<div class="cell from-1 to-2 nice-border inverted gradient-background">
+					Feel the vaporwave...
+				</div>
+				<div class="cell from-3 to-4 nice-border inverted gradient-background flipped">
+					Hmmm, 90s title bars...
+				</div>
+			</div>
+		</div>
+		<hr class="subtle">
+		<a id="section-borders"></a>
+		<div class="margin-container">
+			<p><span class="h2">Fancy :: Borders</span> - They are a bit wider for some reason, this will be fixed later.</p>
+			<hr class="subtle">
 			<div class="margin-container auto-paragraph-margin">
+				<div class="grid col-4 spaced">
+					<div class="cell from-1 to-2">
+						<div class="nice-border"><p><i>&lt;div&gt;</i> element with "<i>.nice-border</i>" class. <sub><sup>(Thickness: 2px)</sup></sub></p></div>
+					</div>
+					<div class="cell from-3 to-4">
+						<div class="nice-border inverted"><p><i>&lt;div&gt;</i> element with "<i>.nice-border</i>" and "<i>.inverted</i>" classes.</p></div>
+					</div>
+
+					<div class="cell from-1 to-2">
+						<div class="nice-border thick"><p>Same element as above with the "<i>.thick</i>" class added. <sub><sup>(Thickness: 4px)</sup></sub></p></div>
+					</div>
+					<div class="cell from-3 to-4">
+						<div class="nice-border inverted thick"><p>Same element as above with the "<i>.thick</i>" class added.</p></div>
+					</div>
+
+					<div class="cell from-1 to-2">
+						<div class="nice-border thick low-res"><p>Same element as above with the "<i>.low-res</i>" class added.</p></div>
+					</div>
+					<div class="cell from-3 to-4">
+						<div class="nice-border inverted thick low-res"><p>Same element as above with the "<i>.low-res</i>" class added.</p></div>
+					</div>
+				</div>
+				<hr class="subtle">
 				<p>
-					By creating a list with the "<i>.link-list</i>" class, every entry will be presented in the following inline format.<br>
-					Be aware that nested lists are not supported by this class !
+					The thick border uses a higher resolution image and can be made to use that same one as the default one by setting "<i>$border-image-save-space</i>" to <i>true</i> in "<i>scss/abstract/options.scss</i>".<br>
+					This can help save around 570 bytes in the final compiled stylesheet and removes the "<i>.low-res</i>" class.
 				</p>
-				<ul class="link-list">
-					<li><a href="#">Link 1</a></li>
-					<li><a href="#">Link 2</a></li>
-					<li><a href="#">Link 3</a></li>
-					<li>Just some text</li>
-					<li><a href="#">Link 4</a></li>
-				</ul>
-				<!-- TODO: Inlined lists -->
+				<p>
+					The smoothing can also be configures with "<i>$border-use-smooth-scaling</i>" if you use the low-res version.
+				</p>
 			</div>
 		</div>
-
-		<hr>
-
-		<a id="section-details"></a>
+		<hr class="subtle">
+		<a id="section-frame"></a>
 		<div class="margin-container">
-			<p><span class="h2">Details</span></p>
+			<p><span class="h2">Fancy :: Frame</span></p>
 			<hr class="subtle">
-
 			<div class="margin-container auto-paragraph-margin">
-				<details>
-					<summary>A simple &lt;details&gt; element</summary>
-					<p>My content</p>
-				</details>
-			</div>
-
-			<div class="margin-container auto-paragraph-margin">
-				<details>
-					<summary class="space-vert-small">A simple &lt;details&gt; element with a margin integrated in the summary</summary>
+				<div class="frame spaced padded">
+					<div class="title">
+						<p>This is a normal frame</p>
+					</div>
 					<p>
-						It avoids having to use yet another container.<br>
-						You simply have to add the "<i>.space-vert-small</i>" class to the summary.
+						This is a "<i>&lt;div&gt;</i>" element with the "<i>.frame</i>" class.<br>
+						The frame also has the "<i>spaced</i>" and "<i>padded</i>" classes to ensure no elements overlap.<br>
+						The margin on top is 0.5em for the title, and the inner padding is 0.5em on all sides to keep a consistent look if no title is used when you have a top margin or previous paragraph margin.
 					</p>
-				</details>
-			</div>
-
-			<!--<div class="margin-container">
-<div class="progress-bar">
-<p>69%</p>
-</div>
-</div>-->
-		</div>
-
-		<hr>
-
-		<a id="section-form"></a>
-		<div class="margin-container">
-			<p><span class="h2">Forms (Unfinished)</span> - All of them are in a grid BTW</p>
-			<hr class="subtle">
-
-
-			<div class="margin-container auto-paragraph-margin">
-				<p class="underline">Buttons:</p>
-				<div class="grid spaced col-4">
-					<div class="cell from-1 to-2">
-						<button onclick="alert('Button clicked');">Button</button>
+					<p>
+						The frame also contains a "<i>&lt;div&gt;</i>" element with the "<i>.title</i>" class to get a WinForm-style title.
+					</p>
+				</div>
+				<br>
+				<div class="frame spaced padded dark fun">
+					<div class="title">
+						<p>This is a dark frame</p>
 					</div>
-					<div class="cell from-3 to-4">
-						<button onclick="alert('Button clicked');" disabled>Disabled</button>
-					</div>
+					<p>
+						This frame was simply given the "<i>.dark</i>" class.
+					</p>
+					<p>
+						You can also add a stylish arrow in the title by adding the "<i>.fun</i>" class to the parent frame.
+					</p>
 				</div>
 			</div>
-
-			<hr>
-
-			<div class="margin-container auto-paragraph-margin">
-				<p class="underline">Inputs:</p>
-				<div class="grid spaced col-4">
-					<div class="cell from-1 to-2">
-						<label for="f1">Text:</label><br>
-						<input type="text" id="f1" name="f1" value="Placeholder">
-						<br><br>
-						<label for="f2">Password with ".full-width":</label><br>
-						<input type="password" class="full-width" id="f2" name="f2" value="Placeholder">
+			<div class="margin-container">
+				<p>This paragraph or any other element is glued to the top of the frame below since the "<i>.auto-paragraph-margin</i>" class is not used.</p>
+				<div class="frame">
+					<div class="title">
+						<p>Title</p>
 					</div>
-					<div class="cell from-3 to-4">
-						<label for="f3">Number:</label><br>
-						<input type="number" id="f3" name="f3">
-						<br><br>
-						<!--<label for="f4">File:</label><br>
-<input type="file" id="f4" name="f4">-->
-					</div>
+					<p>
+						Text here.
+					</p>
 				</div>
 			</div>
 		</div>
-
-		<hr>
-
-		<!--<div class="margin-container">
-<p><span class="h2">Code</span></p>
-<hr class="subtle">
-
-<pre class="code">
-<code>Hello
-World !</code>
-<span class="line-numbers" aria-hidden="true"></span>
-</pre>
-</div>
-
-<hr><!---->
-
+		<hr><hr>
+		<!-- ### Fancy stylesheet END ### -->
+		
+		<!-- ### Footer START ### -->
 		<footer>
 			<ul class="link-list">
 				<li><a href="https://github.com/aziascreations/Simplette-CSS-Stylesheet">GitHub Repository</a></li>
@@ -376,6 +455,7 @@ World !</code>
 			<br>
 			<p>Made by <a href="https://github.com/aziascreations">BOZET Herwin</a></p>
 		</footer>
+		<!-- ### Footer END ### -->
 
 		<!-- Windows -->
 		<div>
